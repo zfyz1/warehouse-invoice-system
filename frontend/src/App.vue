@@ -1,17 +1,13 @@
 <template>
-  <!-- 这里写 HTML 结构，页面显示什么内容 -->
-  <div>
-
-  </div>
+  <Login />
 </template>
 
 <script>
+import Login from "./views/Login.vue";
 export default {
-  // 这里写 JavaScript 逻辑
-  // 数据、方法、生命周期钩子等
+  components:{
+    Login
+  }
 }
 </script>
 
-<style>
-/* 这里写 CSS 样式 */
-</style>

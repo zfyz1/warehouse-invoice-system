@@ -1,19 +1,24 @@
 # Python
-venv/
+.venv/
 __pycache__/
 *.pyc
 
 # Environment
 .env
+.env.*
+!.env.example
 
 # IDE
 .idea/
+.vscode/
 
 # Node
 node_modules/
 
 # Build
 dist/
+frontend/.vite/
 
 # OS
 .DS_Store
+Thumbs.db
