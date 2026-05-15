@@ -189,7 +189,7 @@
 
 ## 七、销售单主表（invoice）
 
-### 7.1 表作用
+### 7.1 表作用     
 
 销售单主表用于记录一次完整的开票行为，是整个开票流程的核心数据载体。
 
@@ -199,12 +199,15 @@
 
 ### 7.2 字段设计
 
-| 字段名 | 类型 | 是否必须 | 说明 |
-|--------|------|----------|------|
-| id | INT | 是 | 主键，自增 |
-| customer_id | INT | 是 | 客户ID |
-| total_price | DECIMAL(10,2) | 是 | 总金额 |
-| created_at | DATETIME | 是 | 创建时间 |
+| 字段名            | 类型 | 是否必须 | 说明 |
+|----------------|------|------|----|
+| invoice_id     | INT | 是    | 主键，自增 |
+| customer_id    | INT | 是    | 客户ID |
+| total_price    | DECIMAL(10,2) | 是    | 总金额 |
+| invoice_status | VARCHAR(20) | 是    | 总金额 | DEFAULT 'draft''订单状态：draft暂存、published已发布
+| remark         |VARCHAR(255) | 否    |订单备注|
+| is_delete      | TINYINT  | 是    |逻辑删除|
+| created_time   | DATETIME | 是    |  |
 
 ---
 

@@ -2,7 +2,9 @@ from flask import Blueprint, request, jsonify
 from db.utils import execute_sql
 
 customer_bp = Blueprint('customer', __name__)
-
+@customer_bp.route('/test', methods=['POST'])
+def test():
+    return "OK"
 
 @customer_bp.route('/add',methods=['POST'])
 def add_customer():
